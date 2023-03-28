@@ -1,10 +1,14 @@
 package com.example.demo;
 
+import com.example.demo.model.AddDeviceRequest;
+import com.example.demo.model.Device;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
@@ -27,19 +31,12 @@ public class SimpleController {
         return ResponseEntity.ok(Arrays.asList(device1, device2));
     }
 
-    @PostMapping("/api")
-    String postAPI() {
+    @PostMapping(value="/api/addProducts", produces = "application/json")
+    ResponseEntity<Object> postAPI(@Validated @RequestBody AddDeviceRequest addDeviceRequest) {
 
         // This API is protected
-        logger.info("Hello New");
-        return "Hello New";
-    }
-
-    @GetMapping("/api")
-    String getAPI() {
-
-        // This API is protected
-        logger.info("Hello New");
-        return "Hello New";
+        return ResponseEntity.ok().build();
     }
 }
+
+

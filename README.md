@@ -2,10 +2,13 @@
 1. Java 11
 2. Maven version above 3.5.0
 
-# How to run this application
-1. Change client-id and secret
-2. In the terminal, run `mvn clean spring-boot:run`
-3. In the terminal, Run `curl localhost:8081/ -H "Authorization: Bearer <access_token>"`
+# How to build resource server for production
+1. In the terminal, run `mvn clean install`
+2. In the terminal, run `java -jar demo-0.0.1-SNAPSHOT.jar --spring.config.location=application.properties`
+
+# How to test this application for development using embedded server.
+1. In the terminal, run `mvn clean spring-boot:run`
+2. In the terminal, Run `curl localhost:8081/ -H "Authorization: Bearer <access_token>"`
 
 
 To call the protected endpoint:

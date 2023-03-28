@@ -18,9 +18,6 @@ import java.util.Map;
 public class SimpleController {
     Logger logger = LoggerFactory.getLogger(SimpleController.class);
 
-    @Value("#{${myMap}}")
-    private Map<String,String> myMap;
-
     @GetMapping("/products")
     public ResponseEntity<List<Device>> hello() {
 

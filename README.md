@@ -22,3 +22,7 @@ To call the unprotected endpoint,
 ```
 curl --location 'localhost:8081/products' \
 ```
+
+
+References:
+https://docs.spring.io/spring-security/reference/5.6.0-RC1/servlet/oauth2/oauth2-resourceserver.html#oauth2resourceserver-opaque-minimaldependencies

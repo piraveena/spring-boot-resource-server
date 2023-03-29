@@ -10,6 +10,7 @@
 1. In the terminal, run `mvn clean spring-boot:run`
 2. In the terminal, Run `curl localhost:8081/ -H "Authorization: Bearer <access_token>"`
 
+Production server endpoint: `https://spring-resource-server.fly.dev`
 
 To call the protected endpoint:
 
